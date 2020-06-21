@@ -14,6 +14,8 @@ from sklearn.externals import joblib
 dataset_url = 'http://mlr.cs.umass.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv'
 data = pd.read_csv(dataset_url, sep=';')
  
+print(data.head())
+print(data.describe())
 # 4. Split data into training and test sets
 y = data.quality
 X = data.drop('quality', axis=1)
